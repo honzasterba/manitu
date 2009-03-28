@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Manitú.cz</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<%= stylesheet_link_tag "general", "screen"%>
+	<%= javascript_include_tag :defaults %>
+</head>
+
+<body>
+	
+<div id="primary">
+
+	<div id="header">
+		<div class="toolbar">
+			<div class="fr">
+				<strong><%= act_user.email %></strong> <strong>|</strong>
+				<%= link_to "odhlásit", :action => "logout" %> <strong>|</strong>
+				účet: <%= account_select %>
+			</div>
+			<%= link_to_with_selected "nápověda", "/manitu/help" %> <strong>|</strong>
+			<%= link_to_with_selected "o projektu", :controller => "/about" %>
+		</div>
+		<h1><%= header_link %></h1>
+		<div class="menu">
+			<%= link_to_with_selected "Monitoring", :controller => "manitu/monitoring" %>
+			<span class="separator">|</span>
+			<%= link_to_with_selected "Uživatelé", :controller => "manitu/users" %>
+			<span class="separator">|</span>
+			<%= link_to_with_selected "Nastavení", :controller => "manitu/settings" %>
+		</div>
+		<div class="reset">&nbsp;</div>
+	</div>
+
+	<%= render :partial => "shared/messages" %>
+	
+	<div id="main">
+	
+		<%= yield :layout %>
+	
+	</div>
+
+	<%= render :partial => "shared/footer" %>
+</div>
+
+</body>
+</html>

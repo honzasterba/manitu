@@ -1,0 +1,22 @@
+<% if report.ok? %>
+	<%= render :partial => "/shared/report_content_ok", :locals => {:report => report} %>
+<% else %>
+
+<h3>Při kontrole adresy <%= report.site.adress %> byla 
+nalezena chyba.</h3>
+
+<p>Doporučuji to co nejdříve prověřit. </p>
+
+<h3>Výsledky kontrol:</h3>
+
+<ul>
+<% report.records.each do |rec| %>
+	<li><%= rec.check.path %>: <%=h rec.ok? ? "OK" : "CHYBA!" %> - <%= rec.message %></li>
+<% end -%>	
+</ul>
+
+<p>Doporučuji situaci prověřit a zajistit nápravu.</p>
+
+<p>Howgh!</p>
+
+<% end %>

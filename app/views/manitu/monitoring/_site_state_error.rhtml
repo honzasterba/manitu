@@ -1,0 +1,6 @@
+<strong>Chyba!</strong> - <%= link_to_remote "vynutit kontrolu", 
+	:url => { :action => "recheck_site", :id => site },
+	:update => site_content_id(site),
+	:before => show(site_progress_id(site)),
+	:complete => visual_effect(:highlight, site_title_id(site))
+	 %>

@@ -1,0 +1,49 @@
+<tr id="<%= check_row_id(check) %>"  class="<%= cycle("odd", "even") -%><%= " disabled" if !check.active? %>">
+<td>
+	<% if !check.active %><%= image_tag("icons/inactive.png", :title => "Vypnuto") %>
+	<% elsif check.last_record.nil? %><%= image_tag("states/new.png", :title => "Nebylo spuštěno") %>
+	<% elsif check.last_record.ok? %><%= image_tag("states/ok.png", :title => "OK") %>
+	<% else %><%= image_tag("states/error.png", :title => "Chyba") %>
+	<% end %>
+	<%=h check.path %>
+</td>
+<% if check.last_record %>
+    <td><%= check.last_record.created_at.to_formatted_s(:cz_datetime) %></td>
+    <td>
+    	<%= check.last_record.message %>
+	</td>
+<% else %>
+    <td colspan="2" class="c">nebylo kontrolováno</td>
+<% end %>
+<td>
+	<% if !check.system? %>
+	    <%= check_row_link check, image_tag("icons/edit.png", :alt => "e", :title => "Upravit"),  
+				{ :url => { :action => "edit_check", :id => check }
+				}, :class => "icon"  %>
+	<% else %>
+		<%= image_tag ("icons/nothing.png") %>
+    <% end %>
+    <% if check.active? %>
+        <%= check_row_link check, image_tag("icons/active.png", :title => "Zapnuto -&gt; Vypnout"),
+            { :url => {:action => "toggle_check", :id => check },
+              :confirm => "Skutečně VYPNOUT kontrolu?" }, 
+			:class => "icon"
+            %>
+    <% else %>
+        <%= check_row_link check, image_tag("icons/inactive.png", :title => "Vypnuto -&gt; Zapnout"),
+            { :url => {:action => "toggle_check", :id => check },
+              :confirm => "Skutečně ZAPNOUT kontrolu?"
+			}, :class => "icon"
+            %>
+    <% end %>
+	<% if !check.system? %>
+	    <%= check_row_link check, image_tag("icons/delete.png", :alt => "x", :title => "Smazat"), 
+			{ :url => { :action => "destroy_check", :id => check },
+			  :confirm => "Skutečně SMAZAT kontrolu?" }, 
+			:class => "icon" 
+			%>			
+	<% else %>
+		<%= image_tag ("icons/nothing.png") %>
+    <% end %>
+</td>
+</tr>

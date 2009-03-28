@@ -1,0 +1,1 @@
+page.replace check_row_id(@check), :partial => "check_row", :locals => { :check => @check }

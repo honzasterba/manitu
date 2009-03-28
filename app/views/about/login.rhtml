@@ -1,0 +1,46 @@
+<h1>Přihlášení</h1>
+
+<p>Zadej svůj email a heslo a Manitů ti otevře svou náruč. </p>
+<p>Ještě nemáš účet? 
+<%= link_to "Zaregistruj se!", :action => "register" %></p>
+
+<% form_tag :action => "login" do %>
+<table class="form">
+	<tr>
+		<th class="enhanced">E-mail:</th>
+		<td><%= text_field_tag "email", params[:email], :class => "enhanced" %></td>
+	</tr>
+	<tr>
+		<th>Heslo:</th>
+		<td><%= password_field_tag "password", "" %></td>
+	</tr>
+	<tr>
+		<th>Zapamatuj si mě:</th>
+		<td><%= check_box_tag "remember" %></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+        <%= submit_tag "Odeslat", :class => "enhanced" %>
+        <%= link_to_function "Zapoměl jsi heslo?" do |page| 
+          page[:forgotpass].visual_effect :appear
+          page[:forgotpass].visual_effect :highlight
+        end %>
+    </td>
+	</tr>
+</table>
+<% end %>
+
+<div id="forgotpass" style="display: none;">
+<h1>Zapomenuté heslo</h1>
+<p>Zadej svůj email a heslo a Manitů ti pošle nové heslo pro přístup. </p>
+<% form_tag :action => "forgot_password" do %>
+<table class="form">
+	<tr>
+		<th class="enhanced">E-mail:</th>
+		<td><%= text_field_tag "email", params[:email], :class => "enhanced" %></td>
+		<td><%= submit_tag "Odeslat", :class => "enhanced" %></td>
+	</tr>
+</table>
+<% end %>
+</div>

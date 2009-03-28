@@ -1,0 +1,22 @@
+xml.instruct!
+
+xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+
+    xml.title       "Manitú.cz: zprávy pro #{@user.email}"
+    xml.link        url_for(:only_path => false, :controller => '/manitu/monitoring')
+    xml.description "Zprávy o chybách a opravách chyb monitoringů na Manitú.cz pro uživatele #{@user.email}"
+
+    @reports.each do |report|
+      xml.item do
+        xml.title       report.title
+        xml.link        url_for(:only_path => false, :controller => '/manitu/monitoring')
+        xml.description render(:partial => "/shared/report_content", :locals => {:report => report})
+        xml.pubDate     CGI.rfc1123_date(report.created_at.to_time)
+        xml.guid        url_for(:only_path => false, :controller => '/manitu/report', :action => 'show', :id => report.id)
+        xml.author      "#{@user.nick} - Manitú.cz"
+      end
+    end
+
+  end
+end

@@ -1,0 +1,3 @@
+page.remove check_row_id(@check)
+page.visual_effect :highlight, site_title_id(@check.site)
+page.hide site_indicator_id(@check.site)

@@ -1,0 +1,10 @@
+tester:
+  id: 1
+  email: tester@manitu.cz
+  password: tester
+  token: tester_token
+user:
+  id: 2
+  email: user@manitu.cz
+  password: user
+  token: user_token

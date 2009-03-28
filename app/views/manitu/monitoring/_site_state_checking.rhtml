@@ -1,0 +1,6 @@
+<strong>Probíhá kontrola</strong> - <%= link_to_remote "obnovit", 
+	:url => { :action => "refresh_site", :id => site },
+	:update => site_content_id(site),
+	:before => show(site_progress_id(site)),
+	:complete => visual_effect(:highlight, site_title_id(site))
+	 %>

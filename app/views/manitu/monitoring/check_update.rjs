@@ -1,0 +1,5 @@
+if @saved
+  page.replace check_row_id(@check), :partial => "check_row", :locals => { :check => @check }
+else
+  page.replace check_row_id(@check), :partial => "check_row_form"
+end

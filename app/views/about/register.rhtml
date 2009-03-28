@@ -1,0 +1,28 @@
+<h1>Registrace</h1>
+
+<p>Vše co k registraci potřebuješ je funkční e-mailová adresa a heslo.
+</p>
+<p>Už jsi zaregistrovaný? Přejdi na stránku pro  
+<%= link_to "přihlášení", :action => "login" %>.</p>
+
+<% form_tag :action => "register" do %>
+<table class="form">
+	<tr>
+		<th class="enhanced">E-mail:</th>
+		<td><%= text_field "user", "email", :class => "enhanced" %></td>
+	</tr>
+	<tr>
+		<th>Heslo:</th>
+		<td><%= password_field "user", "password" %></td>
+	</tr>
+	<tr>
+		<th>Potvrzení hesla:</th>
+		<td><%= password_field "user", "password_confirmation" %></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><%= submit_tag "Odeslat", :class => "enhanced" %></td>
+	</tr>
+</table>
+
+<% end %>

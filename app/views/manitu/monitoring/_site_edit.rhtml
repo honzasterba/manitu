@@ -1,0 +1,26 @@
+<p class="info"><strong>Varování:</strong> změnou adresy dojde k přepnutí stavu na
+Nový a budete muset monitoring znovu ověřit.</p>
+<% if !@site.errors.empty? %>
+<p class="error"><strong>Máš tam chybu:</strong>
+	<%= @site.errors.concat %>
+</p>
+<% end %>
+
+<% form_remote_tag( :url => {:action => "update_site", :id => @site },
+	:before => show_progress(@site)
+	) do %>
+<table class="form">
+	<tr>
+		<th>
+				Adresa: 
+				<%= image_tag("icons/help.png", :alt => "?", 
+					:title => "Zadej kořenovou adresu webu, který chceš monitoriovat.") %>	
+		</th>
+		<td>
+			<%= text_field "site", "adress", :class => "enhanced" %> 
+			<%= submit_tag "Uložit" %> 
+			<%= link_to_function "zrušit", visual_effect(:fade, site_bar_id(@site)) %>
+		</td>
+	</tr>
+</table>
+<% end %>

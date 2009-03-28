@@ -1,0 +1,17 @@
+<h2>Administrace účtu <%=h act_account.name %></h2>
+
+<p>Tady časem bude administrace uživatelů připojených k tvému účtu. 
+Zatím si musíš vystačit sám.</p>
+
+<table class="list">
+	<tr>
+		<th>uživatel</th>
+		<th>práva</th>
+	</tr>
+	<% @rights.each do |right| %>
+		<tr>
+			<td><%= right.user.email %></td>
+			<td><%= rights_desc(right.rights) %></td>
+		</tr>
+	<% end %>
+</table>

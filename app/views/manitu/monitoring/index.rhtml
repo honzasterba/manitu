@@ -1,0 +1,15 @@
+<div id="monitoring">
+
+<% if @error_sites.empty? and @other_sites.empty? %>
+	<%= render :partial => "no_sites" %>
+<% else %>
+	<%= render :partial => "dashboard" %>
+
+	<%= site_list "Problémy je třeba řešit", @error_sites, "site_info" %>
+	<%= site_list "Tady je vše v pořádku", @other_sites, "site_info_short" %>
+	
+	<h2>Přidat monitoring</h2>
+	<%= render :partial => "site_new_form" %>
+<% end %>
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+main_for_tester:
+  id: 1
+  account_id: 1
+  user_id: 1
+  rights: 2
+second_for_tester:
+  id: 2
+  account_id: 2
+  user_id: 1
+  rights: 2

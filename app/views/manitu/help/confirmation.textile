@@ -1,0 +1,26 @@
+h1. Ověření monitoringu
+
+Proces *ověření moniroringu* slouží jako potvzení, že web který jsi nastavil
+pro monitorování je skutčně tvůj. Procesem tě teď provedu na jednoduchém příkladu.
+
+Vytvořil jsem si monitoring pro adresu _http://jansterba.com_. Monitoring se úspěšně
+založil a je ve stavu *Nový*.
+
+p(c). <%= image_tag "help/monitoring_new" %>
+
+Po vytvoření je monitoring ve stavu *Nový* jak je vidět na obrázku. Pro jeho ověření je
+třeba kliknout na odkaz _ověřit_ v hlavičce vedle adresy monitoringu a zobrazí se
+informace o neúspěšném ověření (soubor jsem zatím nevytvořil).
+
+p(c). <%= image_tag "help/monitoring_confirm" %>
+
+Ověření se nezdařilo, ale Manitú mi říká co je pořeba udělat. Je pořeba vytvořit soubor
+s názvem manitu002m001.html na adrese http://jansterba.com/manitu002m001.html (tyto názvy
+se pro vás budou pravděpodobně různit).
+
+Jakmile soubor vyrvořím na nahraji na server spustím kliknutím na _ověřit_ proces ověření
+znova. Manitú je tentokrát spokojen a začíná web monitorovat.
+
+p(c). <%= image_tag "help/monitoring_confirmed" %>
+
+Howgh!

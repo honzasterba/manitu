@@ -1,0 +1,271 @@
+#primary {
+	margin: auto auto;
+	width: 800px;
+}
+#header {
+	background: #FF9523 url(/images/bg_header.png) scroll no-repeat bottom center;
+	position: relative;
+	height: 75px;
+}
+#header h1 {
+	color: #000;
+	font-size: 35px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+#header h1 a {
+	color: #000;
+	background: url(/images/beta.png) no-repeat right center;
+	padding-right: 40px;
+	text-decoration: none;
+	border: 0;
+}
+#header h1 a:hover {
+	text-decoration: none;
+	border: 0;
+}
+#header .menu {
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	right: 20px;
+	bottom: 15px;	
+}
+#header .menu .separator {
+	padding: 0 4px 0 4px;
+	color: #000;
+}
+#header .menu a {
+	color: #fff;
+	text-decoration: none;
+}
+#header .menu a:hover {
+	text-decoration: none;
+	color: #000;
+	border: 0;
+}
+#header .menu a.selected {
+	font-weight: bold;
+}
+#header .toolbar {
+	padding: 1px 20px 0 22px;
+	color: #000;
+	font-size: 80%;
+}
+#header .toolbar a {
+	border: 0;
+	color: #fff;
+}
+#header .toolbar a:hover {
+	border: 0;
+	color: #000;
+}
+#header select {
+	font-size: 80%;
+	font-weight: bold;
+}
+
+#main {
+	margin: 20px 0 20px 0;
+	padding: 0;
+}
+
+#footer {
+	padding: 20px;
+	margin: 20px 0 20px;
+	font-size: 80%;
+	text-align: center;
+	border-top: 2px solid #FF9523;
+}
+#footer .left {
+	float: left;
+}
+#footer .left a {
+	margin-right: 10px;
+}
+
+#notice {
+    background: #00CC00 url(/images/green_top.png) top center no-repeat;
+	color: #fff;
+    text-align: left;
+	font-weight: bold;
+    margin: 10px 0;
+	padding: 10px 0 0 0;
+	font-size: 20px;
+}
+#notice .holder {
+	padding-bottom: 10px;
+	background: #00CC00 url(/images/green_bott.png) bottom center no-repeat;
+}
+#error {
+    background: #CC3300 url(/images/red_top.png) top center no-repeat;
+	color: #fff;
+    text-align: left;
+	font-weight: bold;
+    margin: 10px 0;
+	padding: 10px 0 0 0;
+	font-size: 20px;
+}
+#error .holder {
+	padding-bottom: 10px;
+	background: #CC3300 url(/images/red_bott.png) bottom center no-repeat;
+}
+#notice img, #error img {
+	padding: 0 10px;
+}
+#notice a.close, #error a.close {
+	font-size: 60%;
+	font-weight: normal;
+	color: #fff;
+	display: block;
+	float: right;
+	margin-right: 20px;
+}
+
+.content {
+	padding: 0 20px 10px 20px;
+}
+.content p {
+	padding-bottom: 10px;
+}
+
+.helpMenu {
+	border: 1px dotted #666;
+	padding: 4px;
+}
+.helpMenu strong {
+	color: #333;
+}
+.helpMenu a {
+	border: 0px;
+	margin-left: 10px;
+}
+.helpMenu a.selected {
+	color: #666;
+	font-weight: bold;
+}
+
+#monitoring h2 {
+    margin: 10px 0 20px 0;
+}
+
+.site {
+	background: #fff url(/images/item_bg.png) repeat-y;
+	margin-bottom: 20px;
+	position: relative;
+}
+.site .top {
+	background: #fff url(/images/item_top.png) center top no-repeat;
+	height: 10px;
+}
+.site .bottom {
+	background: #fff url(/images/item_bott.png) center bottom no-repeat;
+	height: 10px;
+}
+.site .middle {
+	padding: 0 10px 0 10px;
+}
+.site h2 {
+	padding: 0 0 0 30px;
+	margin: 5px 0 5px 0 !important;
+	color: #666;
+	background-position: 4px 50%;
+	background-repeat: no-repeat;
+}
+.site h2 .info {
+	padding-left: 20px;
+	font-size: 60%;
+}
+.site h2 .info strong {
+	font-size: 120%;
+}
+.site h2.new {
+	background-image: url(/images/states/new.png);
+}
+.site h2.new .info {
+	color: #ccc;
+}
+.site h2.new .info strong {
+	color: #333;
+	padding: 2px 4px 2px 4px;
+}
+.site h2.checking {
+	background-image: url(/images/states/checking.png);
+}
+.site h2.checking .info {
+	color: #aaa;
+}
+.site h2.error {
+	background-image: url(/images/states/error.png);
+}
+.site h2.error .info {
+	font-weight: bold;
+}
+.site h2.error .info strong {
+	background-color: #CC3300;
+	color: #fff;
+	padding: 2px;
+}
+.site h2.ok {
+	background-image: url(/images/states/ok.png);
+}
+.site h2.ok .info {
+}
+.site h2.ok .info strong {
+	color: #00CC00;
+}
+.site .tools {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+}
+.site .tools a {
+	border: 0;
+}
+.site .tools a:hover {
+	border: 0;	
+}
+.site .indicator {
+	height: 60px;
+	background: url(/images/indicator.gif) center center no-repeat;
+	border: 1px dotted #666;
+}
+.site .bar {
+	font-size: 80%;
+	border: 1px dotted #666;
+	color: #666;
+	padding: 5px;
+	position: relative;
+}
+.site .bar .info {
+}
+.site .bar .error {
+}
+.site .bar .tools {
+	font-size: 80%;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.site .bar .error strong {
+	border-bottom: 1px solid red;
+}
+.site .form {
+	padding-top: 5px;
+}
+.site .list img {
+	padding-left: 5px;
+}
+.site .list .disabled {
+	color: #ccc;
+}
+.site .list .errors {
+	font-size: 70%;
+}
+.site .list .errors strong {
+	border-bottom: 1px solid red;
+}

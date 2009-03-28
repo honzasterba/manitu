@@ -1,0 +1,14 @@
+Při kontrole adresy <%= @report.site.adress %> byla 
+nalezena chyba.
+
+Doporučuji to co nejdříve prověřit. 
+
+Výsledky kontrol:
+
+<% @report.records.each do |rec| %>
+- <%= rec.check.path %>: <%=h rec.ok? ? "OK" : "CHYBA!" %> - <%= rec.message %>
+<% end -%>
+
+Doporučuji situaci prověřit a zajistit nápravu.
+
+Howgh!

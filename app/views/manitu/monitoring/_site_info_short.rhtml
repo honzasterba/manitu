@@ -1,0 +1,17 @@
+<h2 class="<%= site.state %>" id="<%= site_title_id(site) %>">
+	<%= site.adress %>
+	<span class="info">
+		<%= site_state_info(site) %>
+	</span>
+</h2>
+<div class="tools">
+	<%= image_tag "indicator.gif", :alt => "Pracuji...", :title => "Pracuji", :id => site_indicator_id(site), :style => "display: none;" %>
+	<%= site_bar_link site, image_tag("icons/expand.png", :title => "Podrobnosti", :alt => "E"),
+		:url => { :action => "refresh_site", :id => site },
+		:update => site_content_id(site),
+		:complete => nil
+		%>
+</div>
+
+<div class="indicator" id="<%= site_progress_id(site) %>" style="display: none;"></div>
+<div class="bar" id="<%= site_bar_id(site) %>" style="display: none;"></div>

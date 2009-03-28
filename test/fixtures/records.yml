@@ -1,0 +1,12 @@
+ok:
+  report_id: 1
+  check_id: 1
+  ok: true
+  message: OK
+  status: 0
+err:
+  report_id: 2
+  check_id: 1
+  ok: false
+  message: CHYBA
+  status: 0  

@@ -1,0 +1,27 @@
+admin:
+  id: 1
+  path: admin
+  active: true
+  system: false
+  site_id: 1
+  
+system:
+  id: 2
+  path: /
+  active: true
+  system: true
+  site_id: 1
+ 
+inactive:
+  id: 3
+  path: inactive
+  active: false
+  system: false
+  site_id: 1
+  
+boomy_system:
+  id: 4
+  path: /
+  active: true
+  system: true
+  site_id: 2

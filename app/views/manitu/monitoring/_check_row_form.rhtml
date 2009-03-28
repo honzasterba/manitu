@@ -1,0 +1,23 @@
+<tr id="<%= check_row_id(@check) %>" class="<%= cycle("odd", "even") -%><%= " disabled" if !@check.active? %>">
+<td>
+	<%= hidden_field_tag "id", @check.id %>
+	<%= text_field "check", "path", :size => 20 %>
+	<% if !@check.errors.empty? %>
+		<div class="errors"><strong>Chyba:</strong> <%= @check.errors.concat %></div>
+	<% end %>
+</td>
+<td>
+	Aktivní: <%= check_box "check", "active" %>
+</td>
+<td><%= submit_to_remote "save",  "Uložit",
+		:url => { :action => "update_check" },
+		:before => show(site_indicator_id(@check.site)),
+		:complete => visual_effect(:highlight, check_row_id(@check)) + hide(site_indicator_id(@check.site))
+		%>
+</td>
+<td>
+	<%= check_row_link @check, "zrušit", 
+		:url => { :action => "show_check", :id => @check } 
+		%>
+</td>
+</tr>

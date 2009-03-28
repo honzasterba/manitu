@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	margin: 0;
+	color: #948F60;
+	font-size: 15px;
+	line-height: 150%;
+	background: #fff;
+}
+h1 {
+	padding: 15px 0 10px 0;
+	font-size: 200%;
+}
+h2 {
+	padding: 10px 0 5px 0;
+	font-size: 150%;
+}
+h3 {
+	padding: 5px 0 5px 0;
+	font-weight: bold;
+	font-size: 110%;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {
+	margin-left: 20px;
+	list-style: square;
+}
+ol {
+	margin-left: 20px;
+}
+
+#header {
+	background: #fff url(../images/header_bg.png) top left scroll repeat-x;
+	border-bottom: 2px solid #948F60;
+}
+#headerSmall {
+	background: #fff url(../images/header_bg_small.png) top left scroll repeat-x;
+	border-bottom: 2px solid #948F60;
+}
+#header .holder, #headerSmall .holder {
+	margin: auto auto;
+	width: 800px;
+}
+#header img.logo, #headerSmall img.logo {
+	float: left;
+}
+#header .motto {
+	color: #948F61;
+	font-size: 20px;
+	font-weight: bold;
+}
+#headerSmall .motto {
+	color: #948F61;
+	font-size: 14px;
+	font-weight: bold;
+}
+#menu {
+	overflow: hidden;
+	margin-top: 10px;
+}
+#header #menu {
+	margin-left: 175px;
+}
+#headerSmall #menu {
+	overflow: hidden;
+	margin-left: 8px;
+}
+#menu a {
+	padding: 5px 10px 5px 10px;
+	margin: 0 20px 0 0;
+	background: #D9C284 url(../images/bg_butt_orange.png) repeat-x;
+	border: 1px solid #948F60;
+	border-bottom: none;
+	color: #3B1D06;
+	font-weight: bolder;
+	font-size: 20px;
+	display: block;
+	float: left;	
+}
+#menu a:hover {
+	text-decoration: none;
+	background: #8A4F28 url(../images/bg_butt_brown.png) repeat-x;
+}
+#menu a.selected {
+	background: #948F61 url(../images/bg_butt_green.png) repeat-x;
+	text-decoration: none;
+	color: #3B1D06;
+}
+#content, #footer {
+
+}
+#content .holder, #footer .holder {
+	margin: auto auto;
+	width: 800px;
+	padding: 30px
+}
+
+#footer {
+	border-top: 2px solid #948F60;
+}
+
+.l {text-align: left;}
+.r {text-align: right;}
+.c {text-align: center;}
+.fl {float: left;}
+.fr {float: right;}
+
+.small { font-size: smaller; }
+.enhanced { font-weight: bold; font-size: 150%; }
+.nonVisual {display: none;}
+.reset {display: block; font-size: 0px; line-height: 0px; height: 0px; overflow: hidden; clear: both;}

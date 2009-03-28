@@ -1,0 +1,35 @@
+h1. Jak začít
+
+h2. Vytvoření monitoringu
+
+V dolní části stránky najdeš fomulář pro vytvoření nového monitoingu.
+Monitoringem se rozumí jedna samostataná webová aplikace nebo prezentace
+dostupná na jedné adrese. Monitorovat můžeš buď 
+*<acronym title="Např. http://mojedomena.cz nebo http://nazev.mojedomena.cz">doménu druhé a
+nižsí úrovně</acronym>* nebo jakoukoli jinou adresu v 
+*<acronym title="Např. http://www.mojedomena.cz/cesta/k/webu">v podadresáři domény</acronym>*.
+Prozatím je možné monitorovat pouze adresy dostupné přes protokol 
+HTTP(Tj. adresy začínající http://).
+
+h2. Ověření monitoringu
+
+Ještě než začne Manitů tvoje stránky monitorovat je potřeba prokázat, že jsou skutečně tvoje.
+Tento krok se nazývá *ověření*. Pro každý tvuj monitoring ti Manitů řekne název souboru,
+který musíš umístit do kořenového adresáře monitorovaného webu.
+
+Podrobnosti o procesu ověření najdeš 
+<%= link_to "tady", :controller => "help", :action => "confirmation" %>.
+
+h2. Nastavení kontrol
+
+U všech tvých monitoringů provádí Manitú manitů následující kontroly:
+
+# dostupnost ověřovacího souboru
+# dostupnost <acronym title="Je to samé co zadaná adresa monitorinu.">kořenové adresy</acronym>
+# uživatelské kontroly
+
+Ověřování dostupnosti kořenové adresy je možné vypnout stejně tak jako je možné 
+přidávat, odebírat, vypínat a zapínat uživatelské kontroly.
+
+Howgh!
+

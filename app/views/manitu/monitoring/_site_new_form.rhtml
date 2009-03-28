@@ -1,0 +1,23 @@
+<% form_tag( {:action => "add_site"}, {:id => "add_site_form"}) do %>
+<table class="form">
+	<tr>
+		<th>
+			Adresa: 
+			<%= link_to_function image_tag("icons/help.png", :alt => "?",
+				:title => "Zadej kořenovou adresu webu, který chceš monitoriovat."),
+				visual_effect(:appear, "add_site_form_help"),
+				:class => "icon"
+			%>	
+		</th>
+		<td>
+			<%= text_field "site", "adress", :class => "enhanced" %>
+			<%= submit_tag "Přidat", :class => "enhanced" %>
+		</td>
+	</tr>
+	<tr id="<%= "add_site_form_help" %>" style="display: none;" class="help">
+		<td>&nbsp;</td>
+		<td>Zadej kořenovou adresu webu, který chceš monitoriovat.<br />
+		Např. http://www.domena.cz/ nebo http://www.domena.cz/cesta</td>
+	</tr>
+</table>
+<% end %>

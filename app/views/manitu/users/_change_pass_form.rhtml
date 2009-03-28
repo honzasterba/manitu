@@ -1,0 +1,17 @@
+<h2>Změna hesla</h2>
+
+<p>Tady si můžeš změnit své heslo pro přihlášení do systému.</p>
+
+<% form_tag :action => "set_pass" do %>
+<table class="form">
+	<tr>
+		<th>Nové heslo:</th>
+		<td><%= password_field_tag "password" %></td>
+	</tr>
+	<tr>
+		<th>Potvrzení hesla:</th>
+		<td><%= password_field_tag "password_confirmation" %></td>
+	</tr>
+</table>
+<%= submit_tag "Odeslat", :class => "bigger" %>
+<% end %>

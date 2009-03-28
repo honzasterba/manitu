@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+	<div id="notice"><div class="holder"> 
+		<%= link_to_function "skrýt", visual_effect(:fade, "notice"), :class => "close" %>
+		<%= image_tag "green_icon.png" %>
+		<%= flash[:notice] %>
+	</div></div>
+<% end %>
+<% if flash[:error] %>
+	<div id="error"><div class="holder"> 
+		<%= link_to_function "skrýt", visual_effect(:fade, "error"), :class => "close" %>
+		<%= image_tag "red_icon.png" %>
+		<%= flash[:error] %>
+	</div></div>
+<% end %>

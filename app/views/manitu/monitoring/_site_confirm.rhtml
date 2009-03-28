@@ -1,0 +1,21 @@
+<% if @result.nil? %>
+	<p class="info"><strong>Ověřeno. Spouštím monitoring.</strong>
+	</p>
+<% else %>
+<p class="error"><strong>Ověření se nezdařilo:</strong> <%= @result %></p>
+
+<p class="info"><strong>Jak ověřit:</strong>
+	<ul>
+		<li>Na adresu <%=h @site.confirm_uri %> nahraj nějaký malý soubor.</li>
+		<li>Nech mě soubor <%= site_bar_link @site, "ověřit", 
+								:url => { :action => "confirm_site", :id => @site },
+								:update => nil
+	 							%>.
+	 	</li>
+		<li>Soubor nemaž, budu ho kontrolovat průběžně.</li>
+	</ul>
+</p>
+<% end %>
+<div class="tools">
+	<%= link_to_function "zavřít", reset_ui(@site) %>
+</div>

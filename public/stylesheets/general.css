@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 150%;
+    background: #fff;
+}
+h1 {
+    margin: 15px 0 15px 0;
+    font-size: 180%;
+	color: #777;
+}
+h2 {
+    margin: 10px 0 10px 0;
+    font-size: 150%;
+	color: #bbb;
+}
+h3 {
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    font-size: 110%;
+	color: #aaa;
+}
+a {
+    text-decoration: none;
+    color: #aaa;
+	border-bottom: 1px solid #FF9523;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+a.icon {
+	border: 0;
+}
+a.icon:hover {
+	border: 0;
+}
+
+p, li {
+	color: #666;
+}
+ul {
+    margin-left: 20px;
+    list-style: square;
+	margin-bottom: 10px;
+}
+ol {
+    margin-left: 20px;
+	margin-bottom: 10px;	
+}
+img {
+    border: 0;
+}
+
+table.list {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 5px;
+	color: #666;
+}
+table.list th {
+	font-weight: bold;
+	color: #666;
+	border-bottom: 1px solid #FF9523;
+	text-align: left;
+}
+table.list td {
+	padding-top: 2px;
+}
+table.list .even {
+	background-color: #FFFFBB;
+}
+table.list .odd {
+}
+
+table.form {
+	
+}
+table.form img {
+	padding: 0 3px 0 3px;
+	vertical-align: baseline;
+}
+table.form td, th {
+	text-align: left;
+}
+table.form th {
+	color: #666;
+	font-weight: bold;
+}
+table.form td {
+	padding: 5px;
+}
+table.form .error {
+	color: #666;
+}
+table.form .error strong {
+	color: #CC3300;
+}
+
+.help {
+    font-style: italic;
+    font-size: 70%;
+	color: #666;
+}
+.fieldWithErrors {
+	display: inline;
+}
+
+input[type="submit"], input[type="button"], button.enhanced {
+    padding: 2px 5px;
+}
+input.enhanced[type="submit"], input.enhanced[type="button"], button.enhanced {
+    padding: 5px 10px;
+}
+
+.l {text-align: left;}
+.r {text-align: right;}
+.c {text-align: center;}
+.fl {float: left;}
+.fr {float: right;}
+
+.hidden { display: none; }
+.small { font-size: smaller; }
+.enhanced { font-weight: bold; font-size: 150%; }
+.bigger { font-size: 110%; padding: 5px; }
+.nonVisual {display: none;}
+.reset {display: block; font-size: 0px; line-height: 0px; height: 0px; overflow: hidden; clear: both;}

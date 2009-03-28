@@ -1,0 +1,10 @@
+<h1>Potvrzení registrace</h1>
+
+<p>Úspěšně jsi vytvořil uživatelský účet. Jelikož ti Manitú bude
+posílat emaily se zprávami o stavu monitoringů je nutné ověřit, že
+uvedená emailová adresa <strong><%= @user.email %></strong> je skutečně tvoje. 
+</p>
+
+<p>Proto ti byl odeslán email s potvrzovacím odkazem. Po kliknutí na tento
+odkaz ti bude účet aktivován a budeš se moci <%= link_to "přihlásit", login_url %>
+</p>

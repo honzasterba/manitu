@@ -1,0 +1,15 @@
+jansterba:
+  id: 1
+  adress: http://jansterba.com/
+  account_id: 1
+  state: ok
+  updated_at: <%= 10.minutes.ago.strftime("%Y-%m-%d %H:%M") %>
+  last_checked: <%= 1.day.ago.strftime("%Y-%m-%d %H:%M") %>
+
+boomy:
+  id: 2
+  adress: http://www.boomy.cz/
+  account_id: 2
+  state: ok
+  updated_at: <%= Time.now.strftime("%Y-%m-%d %H:%M") %>
+  last_checked: <%= 1.minute.ago.strftime("%Y-%m-%d %H:%M") %>

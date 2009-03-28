@@ -1,0 +1,39 @@
+<div class="tools">
+	<%= image_tag "indicator.gif", :alt => "Pracuji...", :title => "Pracuji", :id => "dashboard_indicator", :style => "display: none;" %>
+</div>		
+<p>máš nastaveno <%= @sites_count %> monitoringů, z toho:</p>
+<ul>
+<% if @error_sites.empty? %>
+	<li>všech <%= @other_sites.size %> monitoringů je <strong>v pořádku</strong></li>
+<% elsif @other_sites.empty? %>
+	<li>všech <%= @error_sites.size %> monitoingů hlási <strong>chyby</strong>
+		nebo vyžadují <strong>ověření</strong>
+	</li>
+<% else %>
+	<li><%= @error_sites.size %> monitoringů je <strong>v pořádku</strong>
+	</li>
+	<li><%= @other_sites.size %> monitoingů hlási <strong>chyby</strong>
+		nebo vyžadují <strong>ověření</strong>	
+	</li>
+<% end %>
+</ul>
+<% if @change %>
+	<p>	<%= image_tag "icons/info.png", :class => "icon", :title => "Upozornění", :alt => "i" %>
+		Byla provedena nová kontrola. Její výsledky můžeš zobrazit
+		<strong><%= link_to_function "obnovením", "window.location.reload();" %></strong>
+		stránky.
+	</p>
+<% else %>
+<script type="text/javascript">
+//<![CDATA[
+try {
+setTimeout(function() {
+<%= show("dashboard_indicator") %>
+<%=	remote_function( :update => "dashboard",
+		:url => { :action => "refresh_dashboard", :actual => Time.now }
+		) %>
+}, 240000);
+} catch (e) { throw e }
+//]]>
+</script>
+<% end %>

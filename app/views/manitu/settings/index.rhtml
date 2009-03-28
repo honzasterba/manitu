@@ -1,0 +1,19 @@
+<div class="content">
+
+<h2>Nastavení účtu <%= act_account.name %></h2>
+
+<p>Tady uživelé brzo najdou globální nastavení pro své monitoringy.</p>
+
+<p>Zatím si musíš vystačit se základními nastaveními.</p>
+
+<h2>Nastavení pro uživatele <%= act_user.nick %>:</h2>
+
+<p>Zatím nejde měnit.</p>
+
+<h3>Upozornění na probémy:</h3>
+<ul>
+	<li>Emailem na <%= act_user.email %>: <strong>zapnuto</strong></li>
+	<li>RSS kanálem na <%= link_to h(rss_desc), rss_path(:id => act_user.token)%></li>
+</ul>
+
+</div>

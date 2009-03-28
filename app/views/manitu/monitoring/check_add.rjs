@@ -1,0 +1,13 @@
+if @new_check.new_record?
+  page.replace_html check_add_form_error_id(@site), 
+      :partial => "check_new_form_errors",
+      :locals => { :check => @new_check }
+  page.show check_add_form_error_id(@site)
+else
+  page[check_add_form_id(@site)].reset
+  page.replace_html site_content_id(@site), 
+      :partial => "site_info",
+      :locals => { :site => @site }
+  page.visual_effect :highlight, site_title_id(@site)
+end
+page.hide site_indicator_id(@site)

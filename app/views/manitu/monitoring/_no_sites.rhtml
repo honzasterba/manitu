@@ -1,0 +1,14 @@
+<div class="content">
+	
+	<%= render_help "how_to_start" %>
+	
+	<p>Tak, šup šup, mazej si nějaký monitoring 
+	<%= link_to_function "přidat", 
+			visual_effect(:highlight, :add_site_form, :duration => 1)+'$("site_adress").focus()' 
+			-%>!
+	</p>
+	
+	<h2>Přidat monitoring</h2>
+	<%= render :partial => "site_new_form" %>
+				
+</div>

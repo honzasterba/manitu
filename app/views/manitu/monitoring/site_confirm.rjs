@@ -1,0 +1,7 @@
+page.hide site_progress_id(@site)
+if @result.nil?
+  page.replace_html site_content_id(@site), :partial => "site_info", :locals => { :site => @site }
+  page.visual_effect :highlight, site_title_id(@site)
+end
+page.replace_html site_bar_id(@site), :partial => "site_confirm"
+page.show site_bar_id(@site)

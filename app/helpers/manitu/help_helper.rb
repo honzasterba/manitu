@@ -1,0 +1,2 @@
+module Manitu::HelpHelper
+end

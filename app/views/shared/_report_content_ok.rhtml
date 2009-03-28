@@ -1,0 +1,16 @@
+<h3>Problémy dříve zjištěné na adrese <%= report.site.adress %>
+byli odstraněny. Vše nyní funguje jak má.</h3>
+
+<p>Výsledky kontrol:</p>
+
+<ul>
+	
+<% report.records.each do |rec| %>
+<li><%= rec.check.path %>: <%= rec.ok? ? "OK" : "CHYBA!" %> - <%= rec.message %></li>
+<% end -%>
+	
+</ul>
+
+<p>Přeji příjemný a úspěšný den.</p>
+
+<p>Howgh!</p>

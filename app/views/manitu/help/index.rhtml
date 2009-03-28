@@ -1,0 +1,10 @@
+<div class="content">
+
+<div class="helpMenu">
+<strong>Témata nápovědy: </strong>
+<%= @menu.collect { |item| link_to_with_selected item.name, :names => [ item.link ] }.join(" ") %>
+</div>
+
+<%= render_help @help %>
+
+</div>

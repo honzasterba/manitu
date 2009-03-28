@@ -1,0 +1,30 @@
+<h2 class="<%= site.state %>" id="<%= site_title_id(site) %>">
+	<%= site.adress %>
+	<span class="info">
+		<%= site_state_info(site) %>
+	</span>
+</h2>
+<div class="tools">
+	<%= image_tag "indicator.gif", :alt => "Pracuji...", :title => "Pracuji", :id => site_indicator_id(site), :style => "display: none;" %>
+	<%= site_bar_link site, image_tag("icons/edit.png", :title => "Upravit", :alt => "e"),
+		:url => { :action => "edit_site", :id => site }
+		%>
+    <%= link_to image_tag("icons/delete.png", :title => "Smazat", :alt => "x"),
+			{ :action => "destroy_site", :id => site },
+			:confirm => "Skutečně SMAZAT?"
+		%>
+	<%= site_bar_link site, image_tag("icons/colapse.png", :title => "Minimalizovat", :alt => "M"),
+		:url => { :action => "colapse_site", :id => site },
+		:update => site_content_id(site),
+		:complete => nil
+		%>	
+</div>
+
+<div class="indicator" id="<%= site_progress_id(site) %>" style="display: none;"></div>
+<div class="bar" id="<%= site_bar_id(site) %>" style="display: none;"></div>
+
+<%= render :partial => "site_check_list", :locals => { :site => site } %>
+
+<%= render :partial => "check_new_form", :locals => {:site => site}%>
+
+

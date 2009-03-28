@@ -1,0 +1,12 @@
+Problémy dříve zjištěné na adrese <%= @report.site.adress %>
+byli odstraněny. Vše nyní funguje jak má.
+
+Výsledky kontrol:
+
+<% @report.records.each do |rec| %>
+- <%= rec.check.path %>: <%= rec.ok? ? "OK" : "CHYBA!" %> - <%= rec.message %>
+<% end -%>
+
+Přeji příjemný a úspěšný den.
+
+Howgh!

@@ -1,0 +1,29 @@
+<div class="content">
+
+<%= render :partial => "account_admin" %>
+
+<h2>Vytvořit nový účet</h2>
+
+<p>Pokud chceš uřčité monitoringy sdílet jen s určitými uživateli, vytvoř pro ně
+zvláštní účet.</p>
+
+<% form_tag :action => "create_account" do %>
+<% form_tag( {:action => "add_site"}, {:id => "add_site_form"}) do %>
+<table class="form">
+	<tr>
+		<th>
+			Název účtu: 
+		</th>
+		<td>
+			<%= text_field "account", "name", :class => "enhanced" %>
+			<%= submit_tag "Přidat", :class => "enhanced" %>
+		</td>
+	</tr>
+</table>
+<% end %>
+
+<% end %>
+
+<%= render :partial => "change_pass_form" %>
+
+</div>

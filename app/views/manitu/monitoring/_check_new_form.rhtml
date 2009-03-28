@@ -1,0 +1,30 @@
+<% form_remote_tag(	:url => { :action => "add_check", :id => site }, 
+	:html => { :id => check_add_form_id(site) },
+	:before => hide(check_add_form_error_id(site))+show(site_indicator_id(site))
+	) do %>
+<table class="form">
+	<tr>
+		<th>Přidat kontrolu: 
+			<%= link_to_function image_tag("icons/help.png", :alt => "?", 
+					:title => "Zadej cestu ke stránce nebo zroji, jehož dostupnost chceš testovat."),
+					visual_effect(:appear, "add_check_form_#{site.id}_help"),
+					:class => "icon"
+			%>
+		</th>
+		<td colspan="2">
+			<%= text_field "check", "path" %>
+			<%= submit_tag "Přidat" %>
+		</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="<%= check_add_form_help_id(site) %>" style="display: none;" class="help">
+		<td>&nbsp;</td>
+		<td colspan="3">Zadej cestu ke stránce nebo zroji, jehož dostupnost chceš testovat.<br />
+		Např. index.html nebo dowloads/file.pdf.</td>
+	</tr>
+	<tr id="<%= check_add_form_error_id(site) %>" style="display: none;"  class="error">
+		<td>&nbsp;</td>
+		<td><strong>Měls tam chybu:</strong></td>
+	</tr>
+</table>
+<% end %>
